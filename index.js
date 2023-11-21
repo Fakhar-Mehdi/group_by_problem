@@ -31,15 +31,21 @@ const array = [{
 ]
 
 
-outputObj = {}
+const groupBy = (data) => {
 
-for (let record of array) {
-    city = record.city
-    if (!outputObj[city])
-        outputObj[city] = []
+    outputObj = {}
 
-    outputObj[city].push(record)
+    for (let record of array) {
+        city = record.city
+        if (!outputObj[city])
+            outputObj[city] = []
+
+        outputObj[city].push(record)
+
+    }
+
+    return outputObj
 
 }
 
-console.log(outputObj)
+console.log(groupBy(array))
