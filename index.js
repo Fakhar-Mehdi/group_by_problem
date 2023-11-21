@@ -34,11 +34,11 @@ const array = [{
 outputObj = {}
 
 for (let record of array) {
-city = record.city
-if (!outputObj[city])
-    outputObj[city] = []
+    city = record.city
+    if (!outputObj[city])
+        outputObj[city] = []
 
-outputObj[city].push(record)
+    outputObj[city].push(record)
 
 }
 
