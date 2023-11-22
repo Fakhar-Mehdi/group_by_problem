@@ -31,7 +31,7 @@ const array = [{
 ]
 
 
-const groupBy = (data, key) => {
+const groupBy1 = (data, key) => {
 
     outputObj = {}
 
@@ -46,6 +46,14 @@ const groupBy = (data, key) => {
 
     return outputObj
 
+}
+
+const groupBy2 = (data, key) => {
+    outputObj = {}
+    const allKeys = [...new Set(data.map((record) => record[key]))]
+    for (let value of allKeys)
+      outputObj[value] = data.filter((record)=> record[key] === value )
+    return outputObj
 }
 
 console.log(groupBy(array, "city"))
