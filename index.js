@@ -35,7 +35,7 @@ const groupBy = (data) => {
 
     outputObj = {}
 
-    for (let record of array) {
+    for (let record of data) {
         city = record.city
         if (!outputObj[city])
             outputObj[city] = []
